@@ -1,0 +1,74 @@
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>
+<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
+<%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic" %>
+<%@ taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles" %>
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Thêm sinh viên</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+ 
+ <br></br>
+  <div class="panel panel-primary" style="margin-bottom:800px;width:880px;">
+	<div class="panel-heading"><h4>Update Region</h4>
+	</div>
+    
+	<html:form action="/themRegion" method="post">
+        <div class="row form-group">
+             <label class="col-sm-2">Region Code<label style="color:red;">*</label><label>:</label></label>
+            <div class="col-lg-3">
+            	<html:text property="regionCode" styleClass="form-control"></html:text>
+            	<%-- <html:errors property="msvError"/> --%>
+            </div>
+        </div>
+        <div class="row form-group">
+             <label class="col-sm-2">Region Name<label style="color: red;">*</label><label>:</label></label>
+            <div class="col-lg-3">
+            	<html:text property="regionName" styleClass="form-control"></html:text>
+            	<%-- <html:errors property="hoTenError"/> --%>
+            </div>
+        </div>
+        <div class="row form-group">
+	            <label class="col-sm-2"style="text-align:left;">Description:</label>
+	            <div class="col-sm-4">
+					<textarea name="description" rows="4" cols="50"></textarea> 
+	            </div>
+	        </div>
+        <div class="row form-group">
+            <div class="col-lg-3 col-lg-offset-2">
+         <button class="btn btn-primary" type="reset">Clear</button> 
+               
+            	<html:submit styleClass="btn btn-primary" property="submit" value="submit">Add</html:submit>
+                <button class="btn btn-primary" onclick="history.go(-1);">Cancel</button>
+            </div>
+        </div>
+        </html:form>
+   
+    <br>
+</div>
+</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
